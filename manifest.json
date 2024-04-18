@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Web Terms Seeker",
+    "version": "1.0",
+    "description": "Search for keywords or terms on a website.",
+    "permissions": ["activeTab"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    },
+    "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
+  
