@@ -1,13 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WTS</title>
+  <title>WTS - Web Terms Seeker</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h2>Search by Keyword or Phrase</h2>
-  <input type="text" id="searchTerm" placeholder="Keyword or Phrase">
+  <header>
+    <img class="icon" src="/assets/img/icon_w.png" alt="WTS Logo">
+    <h1>Web Terms Seeker</h1>
+  </header>
+  <main>
+    <h2>Search by Keyword or Phrase</h2>
+    <input type="text" class="k-or-p" placeholder="Keyword or Phrase" aria-label="Search by keyword or phrase">
+    <div class="result" style="display: none;">
+      <p>
+        <span style="color: #00D876; font-weight: bold;">3 Results</span> found for this search
+      </p>
+      <h3>Result 1 of 3</h3>
+      <div class="btns-i">
+        <button aria-label="Move to next result"><svg fill="#100E15" viewBox="0 0 24 24">
+            <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z" />
+          </svg></button>
+        <button aria-label="Move to previous result"><svg fill="#100E15" viewBox="0 0 24 24">
+            <path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z" />
+          </svg></button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <span>©2024 WTS By <a href="https://github.com/luiisp" target="_blank" rel="noopener noreferrer">Luiisp</a></span>
+    <span>WTS is an <a href="https://github.com/luiisp/wts" target="_blank" rel="noopener noreferrer">open source
+        creation</a></span>
+  </footer>
 </body>
+
 </html>
