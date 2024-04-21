@@ -1,7 +1,7 @@
 # WTS - Web Terms Seeker
 
-[![en](https://img.shields.io/badge/lang-en-red.svg)]()
-> Speak in English? [Access Readme.md in English]()
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/luiisp/wts/blob/main/readme.en.md)
+> Speak in English? [Access Readme.md in English](https://github.com/luiisp/wts/blob/main/readme.en.md)
 
 Tag this project with a star 🌟
 
