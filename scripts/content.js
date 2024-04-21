@@ -107,4 +107,5 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     default:
       break;
   }
+    return true;
 });

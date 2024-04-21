@@ -19,20 +19,13 @@ const arrowChange = async (direction) => {
   } else if (emphasisObj.actualMatch > emphasisObj.maxMatchs) {
     emphasisObj.actualMatch = emphasisObj.minMatchs;
   }
-
+  resultsExplorer.textContent = `Result ${
+    emphasisObj.actualMatch + 1
+  } of ${emphasisObj.maxMatchs + 1}`;
   await chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     chrome.tabs.sendMessage(
       tabs[0].id,
       { type: "arrowChange", data: { newEmphasis: emphasisObj.actualMatch } },
-      (response) => {
-        //if (response.stopPlaceholder) {
-        //    return;
-        //}
-        resultsExplorer.textContent = `Result ${
-          emphasisObj.actualMatch + 1
-        } of ${emphasisObj.maxMatchs + 1}`;
-        console.log(response);
-      }
     );
   });
 };

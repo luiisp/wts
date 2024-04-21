@@ -46,7 +46,7 @@ header h1 {
   text-align: center;
   align-content: center;
   flex-direction: column;
-  margin: 20px 0px;
+  margin: 10px 0px;
 }
 
 .btns-i {
@@ -54,7 +54,7 @@ header h1 {
   gap: 2px;
   justify-content: space-around;
   align-items: center;
-  width: 60%;
+  width: 50%;
 }
 
 .result p {
@@ -99,9 +99,9 @@ input[type="text"] {
   outline: none;
   box-shadow: 1px 1px 1px #d7deca;
   padding: 2%;
-  margin-bottom: 10px;
 }
 footer {
+  margin-top: 10px;
   background-color: #f1f1f1;
   width: 100%;
   display: flex;
