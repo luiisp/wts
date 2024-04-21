@@ -1,6 +1,6 @@
 const searchInPage = (term) => {
     
-    removeAllHighlights();
+
     if (!term) return;
     const range = document.createRange();
     const walker = document.createNodeIterator(document.body, NodeFilter.SHOW_TEXT, null, false);
@@ -47,6 +47,9 @@ const removeAllHighlights = () => {
 
 
 chrome.runtime.onMessage.addListener( (request, sender, sendResponse) => {
+    removeAllHighlights();
+    if (request.term === '') return sendResponse({stopPlaceholder: true});
+
     let re = searchInPage(request.term);
     sendResponse({count: re});
 });
