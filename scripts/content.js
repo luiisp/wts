@@ -1,11 +1,12 @@
 
 const emphasis = (e) => {
     e.scrollIntoView({ block: 'center' }); 
+    e.style.border = '1px solid #F30A4D ';
 }
 
 
 const searchInPage = (term) => {
-    const matches = [];
+    matches = [];
 
     if (!term) return;
     const range = document.createRange();
@@ -44,7 +45,7 @@ const searchInPage = (term) => {
     emphasis(matches[0])
     
 
-    return {count:count, emphasis: 0};
+    return {count:count, countEmphasis: 0};
 }
 
 const removeAllHighlights = () => {
@@ -65,10 +66,12 @@ chrome.runtime.onMessage.addListener( (request, sender, sendResponse) => {
             if (request.data.term == '') return sendResponse({count: false,stopPlaceholder: true});
         
             let result = searchInPage(request.data.term);
-            sendResponse({count: result.count,stopPlaceholder: false, emphasis: result.emphasis});
+            sendResponse({count: result.count,stopPlaceholder: false, emphasis: result.countEmphasis});
             break;
         case 'arrowChange':
-
+            console.log(matches);
+            console.log(request.data.countEmphasis);
+            emphasis(matches[request.data.countEmphasis]);
 
             break;
         default:

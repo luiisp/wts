@@ -4,15 +4,17 @@ const foundedTerms = document.querySelector('.founded-terms');
 const urlRealSearch = document.querySelector('.url-real-search');
 const downBtn = document.querySelector('.down');
 const upBtn = document.querySelector('.up');
+let cEmphasis = 0;
 
 const arrowChange = async (direction) => {
     if (!direction) return;
+    cEmphasis += (direction === 'down') ? 1 : -1;
 
     await chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        chrome.tabs.sendMessage(tabs[0].id, {type: 'arrowChange' , data: {direction:direction} }, (response) => {
-            if (response.stopPlaceholder) {
-                return;
-            }
+        chrome.tabs.sendMessage(tabs[0].id, {type: 'arrowChange' , data: {countEmphasis:cEmphasis} }, (response) => {
+            //if (response.stopPlaceholder) {
+            //    return;
+            //}
             console.log(response);
         });
     });
@@ -37,6 +39,7 @@ input.addEventListener('input', async () => {
                 if (resultDiv.style.display === 'none') {
                     resultDiv.style.display = '';
                 }
+                cEmphasis = response.countEmphasis || 0;
                 foundedTerms.textContent = `${count} ${ lessTwo ? 'result' : 'results' } found`;
                 urlRealSearch.textContent = `Search for ${input.value} on internet`;
                 urlRealSearch.href = `https://www.google.com/search?q=${input.value}`;
