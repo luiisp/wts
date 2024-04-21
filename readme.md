@@ -5,6 +5,8 @@
 
 Tag this project with a star 🌟
 
+![wts-banner](https://github.com/luiisp/wts/assets/115284250/700f950f-3375-4197-957e-d55d72d7620f)
+
 WTS é uma extensão para Google Chrome que facilita a busca por termos/palavras-chave em páginas da web. Basta digitar o termo a ser buscado, e o WTS buscará pelas correspondências na página web atual.
 
 ### Como surgiu a ideia do WTS?
@@ -39,6 +41,8 @@ Contribuições são bem-vindas! Para contribuir, siga os passos abaixo:
 Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
 ©2024 WTS 
+
+
 
 
 
