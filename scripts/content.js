@@ -45,7 +45,11 @@ const searchInPage = (term) => {
     emphasis(matches[0])
     
 
-    return {count:count, countEmphasis: 0};
+    return {count:count, emphasisObj:{
+        actualMatch: 0,
+        maxMatchs: matches.length-1,
+        minMatchs: 0 
+    }};
 }
 
 const removeAllHighlights = () => {
@@ -66,12 +70,17 @@ chrome.runtime.onMessage.addListener( (request, sender, sendResponse) => {
             if (request.data.term == '') return sendResponse({count: false,stopPlaceholder: true});
         
             let result = searchInPage(request.data.term);
-            sendResponse({count: result.count,stopPlaceholder: false, emphasis: result.countEmphasis});
+            sendResponse({count: result.count,stopPlaceholder: false, emphasisObj: result.emphasisObj});
             break;
         case 'arrowChange':
             console.log(matches);
-            console.log(request.data.countEmphasis);
-            emphasis(matches[request.data.countEmphasis]);
+            console.log(request.data.newEmphasis);
+            for (let i of [request.data.newEmphasis - 1, request.data.newEmphasis + 1]) {
+                if (matches[i]) {
+                    matches[i].style.border = 'none';
+                }
+            }
+            emphasis(matches[request.data.newEmphasis]);
 
             break;
         default:

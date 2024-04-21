@@ -4,17 +4,26 @@ const foundedTerms = document.querySelector('.founded-terms');
 const urlRealSearch = document.querySelector('.url-real-search');
 const downBtn = document.querySelector('.down');
 const upBtn = document.querySelector('.up');
-let cEmphasis = 0;
+const btns = document.querySelector('.btns-i');
+const resultsExplorer = document.querySelector('.results-explorer');
+let emphasisObj = {};
 
 const arrowChange = async (direction) => {
-    if (!direction) return;
-    cEmphasis += (direction === 'down') ? 1 : -1;
+    const isunique = emphasisObj.actualMatch === emphasisObj.maxMatchs && emphasisObj.actualMatch === emphasisObj.minMatchs;
+    if (!direction || !emphasisObj || isunique) return;
+    emphasisObj.actualMatch += (direction === 'down') ? 1 : -1;
+    if (emphasisObj.actualMatch < emphasisObj.minMatchs) {
+        emphasisObj.actualMatch = emphasisObj.maxMatchs;
+    }else if (emphasisObj.actualMatch > emphasisObj.maxMatchs) {
+        emphasisObj.actualMatch = emphasisObj.minMatchs;
+    }
 
     await chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        chrome.tabs.sendMessage(tabs[0].id, {type: 'arrowChange' , data: {countEmphasis:cEmphasis} }, (response) => {
+        chrome.tabs.sendMessage(tabs[0].id, {type: 'arrowChange' , data: {newEmphasis:emphasisObj.actualMatch} }, (response) => {
             //if (response.stopPlaceholder) {
             //    return;
             //}
+            resultsExplorer.textContent = `Result ${emphasisObj.actualMatch + 1} of ${emphasisObj.maxMatchs}`;
             console.log(response);
         });
     });
@@ -39,13 +48,22 @@ input.addEventListener('input', async () => {
                 if (resultDiv.style.display === 'none') {
                     resultDiv.style.display = '';
                 }
-                cEmphasis = response.countEmphasis || 0;
+                emphasisObj = response.emphasisObj;
+                if (emphasisObj.actualMatch === emphasisObj.maxMatchs) {
+                    resultsExplorer.style.display = 'none';
+                    btns.style.display = 'none';
+                }else{
+                    resultsExplorer.style.display = '';
+                    btns.style.display = '';
+                    resultsExplorer.textContent = `Result ${emphasisObj.actualMatch + 1} of ${emphasisObj.maxMatchs + 1}`;
+                }
                 foundedTerms.textContent = `${count} ${ lessTwo ? 'result' : 'results' } found`;
                 urlRealSearch.textContent = `Search for ${input.value} on internet`;
                 urlRealSearch.href = `https://www.google.com/search?q=${input.value}`;
                 chrome.action.setBadgeText({
                     text: count.toString(),
                   });
+
             }
         });
     });
