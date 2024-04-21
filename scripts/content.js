@@ -1,11 +1,18 @@
+
+const emphasis = (e) => {
+    e.scrollIntoView({ block: 'center' }); 
+}
+
+
 const searchInPage = (term) => {
-    
+    const matches = [];
 
     if (!term) return;
     const range = document.createRange();
     const walker = document.createNodeIterator(document.body, NodeFilter.SHOW_TEXT, null, false);
 
     let node;
+    let firstHighlight = null;
     let count = 0;
     while (node = walker.nextNode()) {
         const nodeText = node.nodeValue;
@@ -30,10 +37,14 @@ const searchInPage = (term) => {
 
 
             parentNode.removeChild(node);
+            matches.push(highlightSpan);
         }
         
     }
-    return count;
+    emphasis(matches[0])
+    
+
+    return {count:count, emphasis: 0};
 }
 
 const removeAllHighlights = () => {
@@ -47,11 +58,23 @@ const removeAllHighlights = () => {
 
 
 chrome.runtime.onMessage.addListener( (request, sender, sendResponse) => {
-    removeAllHighlights();
-    if (request.term === '') return sendResponse({stopPlaceholder: true});
+    console.log(request);
+    switch (request.type) {
+        case 'analyzeDom':
+            removeAllHighlights();
+            if (request.data.term == '') return sendResponse({count: false,stopPlaceholder: true});
+        
+            let result = searchInPage(request.data.term);
+            sendResponse({count: result.count,stopPlaceholder: false, emphasis: result.emphasis});
+            break;
+        case 'arrowChange':
 
-    let re = searchInPage(request.term);
-    sendResponse({count: re});
+
+            break;
+        default:
+            break;
+    }
+
 });
 
 

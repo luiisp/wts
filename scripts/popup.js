@@ -2,12 +2,27 @@ const input = document.querySelector('.k-or-p');
 const resultDiv = document.querySelector('.result');
 const foundedTerms = document.querySelector('.founded-terms');
 const urlRealSearch = document.querySelector('.url-real-search');
+const downBtn = document.querySelector('.down');
+const upBtn = document.querySelector('.up');
 
+const arrowChange = async (direction) => {
+    if (!direction) return;
 
+    await chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        chrome.tabs.sendMessage(tabs[0].id, {type: 'arrowChange' , data: {direction:direction} }, (response) => {
+            if (response.stopPlaceholder) {
+                return;
+            }
+            console.log(response);
+        });
+    });
+    
+};
+downBtn.addEventListener('click', async () => arrowChange('down'));
+upBtn.addEventListener('click', async () => arrowChange('up'))
 input.addEventListener('input', async () => {
     await chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        console.log('sending', input.value);
-        chrome.tabs.sendMessage(tabs[0].id, { term: input.value }, (response) => {
+        chrome.tabs.sendMessage(tabs[0].id, {type: 'analyzeDom' , data: {term: input.value} }, (response) => {
             if (response.stopPlaceholder) {
                 resultDiv.style.display = 'none';
                 chrome.action.setBadgeText({
