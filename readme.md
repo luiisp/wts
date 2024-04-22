@@ -4,8 +4,7 @@
 > Speak in English? [Access Readme.md in English](https://github.com/luiisp/wts/blob/main/readme.en.md)
 
 Tag this project with a star 🌟
-
-![wts-banner](https://github.com/luiisp/wts/assets/115284250/700f950f-3375-4197-957e-d55d72d7620f)
+![gifwts (2)](https://github.com/luiisp/wts/assets/115284250/46d9be9a-dfa8-49f0-8bbc-e57b8a978897)
 
 WTS é uma extensão para Google Chrome que facilita a busca por termos/palavras-chave em páginas da web. Basta digitar o termo a ser buscado, e o WTS buscará pelas correspondências na página web atual.
 
@@ -39,6 +38,8 @@ Contribuições são bem-vindas! Para contribuir, siga os passos abaixo:
 
 ## Licença
 Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
+
+![wts-banner](https://github.com/luiisp/wts/assets/115284250/700f950f-3375-4197-957e-d55d72d7620f)
 
 ©2024 WTS 
 
