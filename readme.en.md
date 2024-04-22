@@ -15,6 +15,41 @@ WTS captures the term to be searched and searches for all occurrences of the ter
 - [✅] Search for terms/keywords on the web page
 - [✅] Navigation between found occurrences
 - [✅] Highlighting of found occurrences
+- [✅] Support for 21 languages (check the supported languages)
+
+### Supported Languages
+- `ar` Arabic
+- `cs` Czech
+- `da` Danish
+- `de` German
+- `en` English
+- `es` Spanish
+- `fi` Finnish
+- `fil` Filipino
+- `fr` French
+- `id` Indonesian
+- `ja` Japanese
+- `ko` Korean
+- `nl` Dutch
+- `pl` Polish
+- `pt_BR` Portuguese (Brazil)
+- `pt_PT` Portuguese (Portugal)
+- `ro` Romanian
+- `ru` Russian
+- `sv` Swedish
+- `th` Thai
+- `tr` Turkish
+- `zh_CN` Chinese (China)
+> Did you miss your language or notice an error in the translation? You can change this yourself! Read below how to do it
+### How to add your own language
+
+* Create a folder with your language prefix (ISO 639-1 Code) in _locates EX: _locates/pt_BR for Portuguese (Brazil) [The location prefixes in ISO 639-1 Code can be seen here](https://www.loc.gov/standards/iso639-2/php/code_list.php)
+
+* Copy the messages.json file from a directory of any language to the folder you created
+
+* Translate the file to your language
+
+* Make the pull request (more information in Contributions)
 
 ## Installation
 1. Clone the repository (`git clone https://github.com/luiisp/wts`)

@@ -18,6 +18,42 @@ O WTS captura o termo a ser buscado e realiza a busca por todas as ocorrências 
 - [✅] Busca por termos/palavras chaves na página web
 - [✅] Navegação entre as ocorrências encontradas
 - [✅] Destaque das ocorrências encontradas
+- [✅] Suporte para 21 idiomas (confira os idiomas suportados)
+
+### Idiomas suportados
+- `ar`	Árabe
+- `cs`	Tcheco
+- `da`	Dinamarquês
+- `de`	Alemão
+- `en`	Inglês
+- `es`	Espanhol
+- `fi`	Finlandês
+- `fil`	Filipino
+- `fr`	Francês
+- `id`	Indonésio
+- `ja`	Japonês
+- `ko`	Coreano
+- `nl`	Holandês
+- `pl`	Polonês
+- `pt_BR`	Português (Brasil)
+- `pt_PT`	Português (Portugal)
+- `ro`	Romeno
+- `ru`	Russo
+- `sv`	Sueco
+- `th`	Tailandês
+- `tr`	Turco
+- `zh_CN`	Chinês (China)
+> Did you miss your language or notice an error in the translation? You can change this yourself! Read below how to do it
+
+### How to add your own language
+
+* Create a folder with your language prefix (ISO 639-1 Code) in _locates EX: _locates/pt_BR for Portuguese (Brazil) [The location prefixes in ISO 639-1 Code can be seen here](https://www.loc.gov/standards/iso639-2/php/code_list.php)
+
+* Copy the messages.json file from a directory of any language to the folder you created
+
+* Translate the file to your language
+
+* Make the pull request (more information in Contributions)
 
 ## Instalação
 1. Clone o repositorio (```git clone https://github.com/luiisp/wts```)
