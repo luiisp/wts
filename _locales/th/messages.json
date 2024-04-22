@@ -1,0 +1,44 @@
+{
+    "extName": {
+        "message": "Web Terms Seeker"
+    },
+    "extDescription": {
+        "message": "ค้นหาคำหลักหรือคำในเว็บไซต์"
+    },
+    "searchFor": {
+        "message": "ค้นหาตามคำหลักหรือวลี"
+    },
+    "keyOrPhrase": {
+        "message": "คำหลักหรือวลี"
+    },
+    "devBy": {
+        "message": "©2024 WTS - พัฒนาโดย <3 โดย"
+    },
+    "forTSearch":{
+        "message":"สำหรับการค้นหานี้"
+    },
+    "openSource":{
+        "message": "WTS เป็น"
+    },
+    "openSourceUrl":{
+        "message": "โครงการซอฟต์แวร์โอเพนซอร์ส"
+    },
+    "result": {
+        "message": "ผลลัพธ์"
+    },
+    "results": {
+        "message": "ผลลัพธ์"
+    },
+    "found": {
+        "message": "พบ"
+    },
+    "searchForUrl":{
+        "message": "ค้นหา"
+    },
+    "onInternet":{
+        "message": "บนอินเทอร์เน็ต"
+    },
+    "of":{
+        "message": "ของ"
+    }
+}

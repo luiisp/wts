@@ -1,0 +1,44 @@
+{
+    "extName": {
+        "message": "Web Terms Seeker"
+    },
+    "extDescription": {
+        "message": "Procure por palavras-chave ou termos num website."
+    },
+    "searchFor": {
+        "message": "Pesquisar por Palavra-chave ou Frase"
+    },
+    "keyOrPhrase": {
+        "message": "Palavra-chave ou Frase"
+    },
+    "devBy": {
+        "message": "©2024 WTS - Desenvolvido com <3 por"
+    },
+    "forTSearch":{
+        "message":"para esta pesquisa"
+    },
+    "openSource":{
+        "message": "O WTS é um"
+    },
+    "openSourceUrl":{
+        "message": "projeto de código aberto"
+    },
+    "result": {
+        "message": "Resultado"
+    },
+    "results": {
+        "message": "Resultados"
+    },
+    "found": {
+        "message": "Encontrado"
+    },
+    "searchForUrl":{
+        "message": "Pesquisar por"
+    },
+    "onInternet":{
+        "message": "na internet"
+    },
+    "of":{
+        "message": "de"
+    }
+}

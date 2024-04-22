@@ -1,0 +1,44 @@
+{
+    "extName": {
+        "message": "Web Terms Seeker"
+    },
+    "extDescription": {
+        "message": "Maghanap ng mga keyword o termino sa isang website."
+    },
+    "searchFor": {
+        "message": "Maghanap gamit ang Keyword o Parirala"
+    },
+    "keyOrPhrase": {
+        "message": "Keyword o Parirala"
+    },
+    "devBy": {
+        "message": "©2024 WTS - Binuo nang may puso ni"
+    },
+    "forTSearch":{
+        "message":"para sa paghahanap na ito"
+    },
+    "openSource":{
+        "message": "Ang WTS ay isang"
+    },
+    "openSourceUrl":{
+        "message": "proyektong open source"
+    },
+    "result": {
+        "message": "Resulta"
+    },
+    "results": {
+        "message": "Mga Resulta"
+    },
+    "found": {
+        "message": "Nahanap"
+    },
+    "searchForUrl":{
+        "message": "Maghanap Para sa"
+    },
+    "onInternet":{
+        "message": "sa internet"
+    },
+    "of":{
+        "message": "ng"
+    }
+}

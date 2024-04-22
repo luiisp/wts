@@ -1,0 +1,44 @@
+{
+    "extName": {
+        "message": "Web Terim Araştırıcısı"
+    },
+    "extDescription": {
+        "message": "Bir web sitesinde anahtar kelimeleri veya terimleri arayın."
+    },
+    "searchFor": {
+        "message": "Anahtar Kelime veya İfadeye Göre Ara"
+    },
+    "keyOrPhrase": {
+        "message": "Anahtar Kelime veya İfade"
+    },
+    "devBy": {
+        "message": "©2024 WTS - Tarafından geliştirilmiştir <3"
+    },
+    "forTSearch":{
+        "message":"bu arama için"
+    },
+    "openSource":{
+        "message": "WTS bir"
+    },
+    "openSourceUrl":{
+        "message": "açık kaynaklı proje"
+    },
+    "result": {
+        "message": "Sonuç"
+    },
+    "results": {
+        "message": "Sonuçlar"
+    },
+    "found": {
+        "message": "Bulundu"
+    },
+    "searchForUrl":{
+        "message": "Ara"
+    },
+    "onInternet":{
+        "message": "İnternet üzerinde"
+    },
+    "of":{
+        "message": "oluşan"
+    }
+}

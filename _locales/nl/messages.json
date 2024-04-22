@@ -1,0 +1,44 @@
+{
+    "extName": {
+        "message": "Web Terms Seeker"
+    },
+    "extDescription": {
+        "message": "Zoek naar zoekwoorden of termen op een website."
+    },
+    "searchFor": {
+        "message": "Zoeken op Trefwoord of Zin"
+    },
+    "keyOrPhrase": {
+        "message": "Trefwoord of Zin"
+    },
+    "devBy": {
+        "message": "©2024 WTS - Ontwikkeld met <3 door"
+    },
+    "forTSearch":{
+        "message":"voor deze zoekopdracht"
+    },
+    "openSource":{
+        "message": "WTS is een"
+    },
+    "openSourceUrl":{
+        "message": "open source creatie"
+    },
+    "result": {
+        "message": "Resultaat"
+    },
+    "results": {
+        "message": "Resultaten"
+    },
+    "found": {
+        "message": "Gevonden"
+    },
+    "searchForUrl":{
+        "message": "Zoeken Naar"
+    },
+    "onInternet":{
+        "message": "op het internet"
+    },
+    "of":{
+        "message": "van"
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "extName": {
+        "message": "Web Terms Seeker"
+    },
+    "extDescription": {
+        "message": "Hledání klíčových slov nebo termínů na webové stránce."
+    },
+    "searchFor": {
+        "message": "Hledat podle klíčového slova nebo fráze"
+    },
+    "keyOrPhrase": {
+        "message": "Klíčové slovo nebo fráze"
+    },
+    "devBy": {
+        "message": "©2024 WTS - Vyvinuto s <3 od"
+    },
+    "forTSearch":{
+        "message":"pro tuto hledání"
+    },
+    "openSource":{
+        "message": "WTS je"
+    },
+    "openSourceUrl":{
+        "message": "otevřený zdrojový kód"
+    },
+    "result": {
+        "message": "Výsledek"
+    },
+    "results": {
+        "message": "Výsledky"
+    },
+    "found": {
+        "message": "Nalezeno"
+    },
+    "searchForUrl":{
+        "message": "Hledat"
+    },
+    "onInternet":{
+        "message": "na internetu"
+    },
+    "of":{
+        "message": "z"
+    }
+}

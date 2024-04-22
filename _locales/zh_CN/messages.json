@@ -1,0 +1,44 @@
+{
+    "extName": {
+        "message": "Web Terms Seeker"
+    },
+    "extDescription": {
+        "message": "在网站上搜索关键词或术语。"
+    },
+    "searchFor": {
+        "message": "按关键词或短语搜索"
+    },
+    "keyOrPhrase": {
+        "message": "关键词或短语"
+    },
+    "devBy": {
+        "message": "©2024 WTS - 由...开发 <3"
+    },
+    "forTSearch":{
+        "message":"用于此搜索"
+    },
+    "openSource":{
+        "message": "WTS 是一个"
+    },
+    "openSourceUrl":{
+        "message": "开源项目"
+    },
+    "result": {
+        "message": "结果"
+    },
+    "results": {
+        "message": "结果"
+    },
+    "found": {
+        "message": "找到"
+    },
+    "searchForUrl":{
+        "message": "搜索"
+    },
+    "onInternet":{
+        "message": "在互联网上"
+    },
+    "of":{
+        "message": "的"
+    }
+}

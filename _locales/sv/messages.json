@@ -1,0 +1,44 @@
+{
+    "extName": {
+        "message": "Web Terms Seeker"
+    },
+    "extDescription": {
+        "message": "Sök efter nyckelord eller termer på en webbplats."
+    },
+    "searchFor": {
+        "message": "Sök efter Nyckelord eller Fras"
+    },
+    "keyOrPhrase": {
+        "message": "Nyckelord eller Fras"
+    },
+    "devBy": {
+        "message": "©2024 WTS - Utvecklad med <3 av"
+    },
+    "forTSearch":{
+        "message":"för denna sökning"
+    },
+    "openSource":{
+        "message": "WTS är en"
+    },
+    "openSourceUrl":{
+        "message": "öppen källkodsprojekt"
+    },
+    "result": {
+        "message": "Resultat"
+    },
+    "results": {
+        "message": "Resultat"
+    },
+    "found": {
+        "message": "Hittat"
+    },
+    "searchForUrl":{
+        "message": "Sök Efter"
+    },
+    "onInternet":{
+        "message": "på internet"
+    },
+    "of":{
+        "message": "av"
+    }
+}

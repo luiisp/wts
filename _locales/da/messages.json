@@ -1,0 +1,44 @@
+{
+    "extName": {
+        "message": "Web Terms Seeker"
+    },
+    "extDescription": {
+        "message": "Søg efter nøgleord eller termer på en hjemmeside."
+    },
+    "searchFor": {
+        "message": "Søg efter nøgleord eller frase"
+    },
+    "keyOrPhrase": {
+        "message": "Nøgleord eller frase"
+    },
+    "devBy": {
+        "message": "©2024 WTS - Udviklet med <3 af"
+    },
+    "forTSearch":{
+        "message":"til denne søgning"
+    },
+    "openSource":{
+        "message": "WTS er en"
+    },
+    "openSourceUrl":{
+        "message": "open source skabelse"
+    },
+    "result": {
+        "message": "Resultat"
+    },
+    "results": {
+        "message": "Resultater"
+    },
+    "found": {
+        "message": "Fundet"
+    },
+    "searchForUrl":{
+        "message": "Søg efter"
+    },
+    "onInternet":{
+        "message": "på internettet"
+    },
+    "of":{
+        "message": "af"
+    }
+}

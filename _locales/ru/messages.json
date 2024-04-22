@@ -1,0 +1,44 @@
+{
+    "extName": {
+        "message": "Web Terms Seeker"
+    },
+    "extDescription": {
+        "message": "Поиск ключевых слов или терминов на веб-сайте."
+    },
+    "searchFor": {
+        "message": "Поиск по ключевому слову или фразе"
+    },
+    "keyOrPhrase": {
+        "message": "Ключевое слово или фраза"
+    },
+    "devBy": {
+        "message": "©2024 WTS - Разработано с <3"
+    },
+    "forTSearch":{
+        "message":"для этого поиска"
+    },
+    "openSource":{
+        "message": "WTS -"
+    },
+    "openSourceUrl":{
+        "message": "проект с открытым исходным кодом"
+    },
+    "result": {
+        "message": "Результат"
+    },
+    "results": {
+        "message": "Результаты"
+    },
+    "found": {
+        "message": "Найдено"
+    },
+    "searchForUrl":{
+        "message": "Поиск по"
+    },
+    "onInternet":{
+        "message": "в интернете"
+    },
+    "of":{
+        "message": "из"
+    }
+}

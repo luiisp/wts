@@ -1,0 +1,44 @@
+{
+    "extName": {
+        "message": "Web Terms Seeker"
+    },
+    "extDescription": {
+        "message": "Etsi avainsanoja tai termejä verkkosivustolta."
+    },
+    "searchFor": {
+        "message": "Etsi avainsanan tai lauseen perusteella"
+    },
+    "keyOrPhrase": {
+        "message": "Avainsana tai lause"
+    },
+    "devBy": {
+        "message": "©2024 WTS - Kehitetty <3:lla"
+    },
+    "forTSearch":{
+        "message":"tämän haun"
+    },
+    "openSource":{
+        "message": "WTS on"
+    },
+    "openSourceUrl":{
+        "message": "avointa lähdekoodia"
+    },
+    "result": {
+        "message": "Tulos"
+    },
+    "results": {
+        "message": "Tulokset"
+    },
+    "found": {
+        "message": "Löydetty"
+    },
+    "searchForUrl":{
+        "message": "Hae"
+    },
+    "onInternet":{
+        "message": "internetissä"
+    },
+    "of":{
+        "message": "saakka"
+    }
+}

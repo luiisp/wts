@@ -1,0 +1,44 @@
+{
+    "extName": {
+        "message": "Web Terms Seeker"
+    },
+    "extDescription": {
+        "message": "البحث عن كلمات مفتاحية أو مصطلحات على موقع ويب."
+    },
+    "searchFor": {
+        "message": "البحث حسب الكلمة الرئيسية أو العبارة"
+    },
+    "keyOrPhrase": {
+        "message": "الكلمة الرئيسية أو العبارة"
+    },
+    "devBy": {
+        "message": "©2024 WTS - تم تطويره بـ<3 بواسطة"
+    },
+    "forTSearch":{
+        "message":"لهذا البحث"
+    },
+    "openSource":{
+        "message": "WTS هو"
+    },
+    "openSourceUrl":{
+        "message": "إبداع مفتوح المصدر"
+    },
+    "result": {
+        "message": "النتيجة"
+    },
+    "results": {
+        "message": "النتائج"
+    },
+    "found": {
+        "message": "وجد"
+    },
+    "searchForUrl":{
+        "message": "البحث عن"
+    },
+    "onInternet":{
+        "message": "على الإنترنت"
+    },
+    "of":{
+        "message": "من"
+    }
+}

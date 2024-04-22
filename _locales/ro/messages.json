@@ -1,0 +1,44 @@
+{
+    "extName": {
+        "message": "Web Terms Seeker"
+    },
+    "extDescription": {
+        "message": "Caută cuvinte cheie sau termeni pe un site web."
+    },
+    "searchFor": {
+        "message": "Caută după Cuvânt-cheie sau Fraza"
+    },
+    "keyOrPhrase": {
+        "message": "Cuvânt-cheie sau Fraza"
+    },
+    "devBy": {
+        "message": "©2024 WTS - Dezvoltat cu <3 de"
+    },
+    "forTSearch":{
+        "message":"pentru această căutare"
+    },
+    "openSource":{
+        "message": "WTS este un"
+    },
+    "openSourceUrl":{
+        "message": "proiect open source"
+    },
+    "result": {
+        "message": "Rezultat"
+    },
+    "results": {
+        "message": "Rezultate"
+    },
+    "found": {
+        "message": "Găsit"
+    },
+    "searchForUrl":{
+        "message": "Caută Pentru"
+    },
+    "onInternet":{
+        "message": "pe internet"
+    },
+    "of":{
+        "message": "de"
+    }
+}

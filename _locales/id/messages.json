@@ -1,0 +1,44 @@
+{
+    "extName": {
+        "message": "Web Terms Seeker"
+    },
+    "extDescription": {
+        "message": "Cari kata kunci atau istilah di situs web."
+    },
+    "searchFor": {
+        "message": "Cari berdasarkan Kata Kunci atau Frasa"
+    },
+    "keyOrPhrase": {
+        "message": "Kata Kunci atau Frasa"
+    },
+    "devBy": {
+        "message": "©2024 WTS - Dikembangkan dengan <3 oleh"
+    },
+    "forTSearch":{
+        "message":"untuk pencarian ini"
+    },
+    "openSource":{
+        "message": "WTS adalah"
+    },
+    "openSourceUrl":{
+        "message": "proyek sumber terbuka"
+    },
+    "result": {
+        "message": "Hasil"
+    },
+    "results": {
+        "message": "Hasil"
+    },
+    "found": {
+        "message": "Ditemukan"
+    },
+    "searchForUrl":{
+        "message": "Cari Untuk"
+    },
+    "onInternet":{
+        "message": "di internet"
+    },
+    "of":{
+        "message": "dari"
+    }
+}

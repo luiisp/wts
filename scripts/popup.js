@@ -8,6 +8,31 @@ const btns = document.querySelector(".btns-i");
 const resultsExplorer = document.querySelector(".results-explorer");
 let emphasisObj = {};
 
+const fixDisplayText = {
+  "search-ph":chrome.i18n.getMessage("searchFor"),
+  "dev-by":chrome.i18n.getMessage("devBy"),
+  "open-source":chrome.i18n.getMessage("openSource"),
+  "for-t-search":chrome.i18n.getMessage("forTSearch"),
+  "open-source-url":chrome.i18n.getMessage("openSourceUrl"),
+}
+const displayText = {
+  "keyOrPhrase":chrome.i18n.getMessage("keyOrPhrase"),
+  "result":chrome.i18n.getMessage("result"),
+  "results":chrome.i18n.getMessage("results"),
+  "found":chrome.i18n.getMessage("found"),
+  "searchFor":chrome.i18n.getMessage("searchForUrl"),
+  "onInternet":chrome.i18n.getMessage("onInternet"),
+  "of":chrome.i18n.getMessage("of"),
+}
+
+const langTranslate = () => {
+  for ( k in fixDisplayText){
+    document.querySelector(`.${k}`).textContent = fixDisplayText[k];
+  }
+  input.placeholder = displayText.keyOrPhrase;
+
+};
+
 const saveState = () => {
   chrome.storage.local.set({
     term: input.value,
@@ -26,7 +51,7 @@ const arrowChange = async (direction) => {
   } else if (emphasisObj.actualMatch > emphasisObj.maxMatchs) {
     emphasisObj.actualMatch = emphasisObj.minMatchs;
   }
-  resultsExplorer.textContent = `Result ${emphasisObj.actualMatch + 1} of ${
+  resultsExplorer.textContent = `${displayText.result} ${emphasisObj.actualMatch + 1} ${displayText.of} ${
     emphasisObj.maxMatchs + 1
   }`;
   await chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -65,14 +90,14 @@ input.addEventListener("input", async () => {
           } else {
             resultsExplorer.style.display = "";
             btns.style.display = "";
-            resultsExplorer.textContent = `Result ${
+            resultsExplorer.textContent = `${displayText.result} ${
               emphasisObj.actualMatch + 1
-            } of ${emphasisObj.maxMatchs + 1}`;
+            } ${displayText.of} ${emphasisObj.maxMatchs + 1}`;
           }
           foundedTerms.textContent = `${count} ${
-            lessTwo ? "result" : "results"
-          } found`;
-          urlRealSearch.textContent = `Search for ${input.value} on internet`;
+            lessTwo ? displayText.result : displayText.results
+          } ${displayText.found}`;
+          urlRealSearch.textContent = `${displayText.searchFor} ${input.value} ${displayText.onInternet}`;
           urlRealSearch.href = `https://www.google.com/search?q=${input.value}`;
           chrome.action.setBadgeText({
             text: count.toString(),
@@ -84,6 +109,7 @@ input.addEventListener("input", async () => {
 });
 
 document.addEventListener("DOMContentLoaded", async () => {
+  langTranslate();
   await chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     chrome.tabs.sendMessage(
       tabs[0].id,
@@ -106,14 +132,14 @@ document.addEventListener("DOMContentLoaded", async () => {
           } else {
             resultsExplorer.style.display = "";
             btns.style.display = "";
-            resultsExplorer.textContent = `Result ${
+            resultsExplorer.textContent = `${displayText.result} ${
               emphasisObj.actualMatch + 1
-            } of ${emphasisObj.maxMatchs + 1}`;
+            } ${displayText.of} ${emphasisObj.maxMatchs + 1}`;
           }
           foundedTerms.textContent = `${count} ${
-            lessTwo ? "result" : "results"
-          } found`;
-          urlRealSearch.textContent = `Search for ${input.value} on internet`;
+            lessTwo ? displayText.result : displayText.results
+          } ${displayText.found}`;
+          urlRealSearch.textContent = `${displayText.searchFor} ${input.value} ${displayText.onInternet}`;
           urlRealSearch.href = `https://www.google.com/search?q=${input.value}`;
           chrome.action.setBadgeText({
             text: count.toString(),

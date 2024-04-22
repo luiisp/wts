@@ -1,9 +1,10 @@
 {
     "manifest_version": 3,
-    "name": "Web Terms Seeker",
+    "name": "__MSG_extName__",
     "version": "1.0",
-    "description": "Search for keywords or terms on a website.",
+    "description": "__MSG_extDescription__",
     "permissions": ["activeTab","scripting"],
+    "default_locale": "en",
     "background": {
       "service_worker": "scripts/background.js"
     },

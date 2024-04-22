@@ -1,0 +1,44 @@
+{
+    "extName": {
+        "message": "Web Terms Seeker"
+    },
+    "extDescription": {
+        "message": "Suche nach Schlüsselwörtern oder Begriffen auf einer Website."
+    },
+    "searchFor": {
+        "message": "Suche nach Schlüsselwort oder Phrase"
+    },
+    "keyOrPhrase": {
+        "message": "Schlüsselwort oder Phrase"
+    },
+    "devBy": {
+        "message": "©2024 WTS - Entwickelt mit <3 von"
+    },
+    "forTSearch":{
+        "message":"für diese Suche"
+    },
+    "openSource":{
+        "message": "WTS ist ein"
+    },
+    "openSourceUrl":{
+        "message": "Open-Source-Projekt"
+    },
+    "result": {
+        "message": "Ergebnis"
+    },
+    "results": {
+        "message": "Ergebnisse"
+    },
+    "found": {
+        "message": "Gefunden"
+    },
+    "searchForUrl":{
+        "message": "Suche nach"
+    },
+    "onInternet":{
+        "message": "im Internet"
+    },
+    "of":{
+        "message": "von"
+    }
+}
