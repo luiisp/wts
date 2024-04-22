@@ -1,6 +1,7 @@
 # WTS - Web Terms Seeker
 
 Tag this project with a star 🌟
+![gifwts (2)](https://github.com/luiisp/wts/assets/115284250/46d9be9a-dfa8-49f0-8bbc-e57b8a978897)
 
 WTS is a Google Chrome extension that facilitates searching for terms/keywords on web pages. Simply enter the term to be searched, and WTS will search for matches on the current web page.
 
@@ -34,5 +35,5 @@ Contributions are welcome! To contribute, follow the steps below:
 
 ## License
 Distributed under the MIT license. See `LICENSE` for more information.
-
+![wts-banner](https://github.com/luiisp/wts/assets/115284250/700f950f-3375-4197-957e-d55d72d7620f)
 ©2024 WTS
