@@ -8,6 +8,13 @@ const btns = document.querySelector(".btns-i");
 const resultsExplorer = document.querySelector(".results-explorer");
 let emphasisObj = {};
 
+const saveState = () => {
+  chrome.storage.local.set({
+    term: input.value,
+    emphasisObj: emphasisObj,
+  });
+};
+
 const arrowChange = async (direction) => {
   const isunique =
     emphasisObj.actualMatch === emphasisObj.maxMatchs &&
@@ -19,14 +26,14 @@ const arrowChange = async (direction) => {
   } else if (emphasisObj.actualMatch > emphasisObj.maxMatchs) {
     emphasisObj.actualMatch = emphasisObj.minMatchs;
   }
-  resultsExplorer.textContent = `Result ${
-    emphasisObj.actualMatch + 1
-  } of ${emphasisObj.maxMatchs + 1}`;
+  resultsExplorer.textContent = `Result ${emphasisObj.actualMatch + 1} of ${
+    emphasisObj.maxMatchs + 1
+  }`;
   await chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.tabs.sendMessage(
-      tabs[0].id,
-      { type: "arrowChange", data: { newEmphasis: emphasisObj.actualMatch } },
-    );
+    chrome.tabs.sendMessage(tabs[0].id, {
+      type: "arrowChange",
+      data: { newEmphasis: emphasisObj.actualMatch },
+    });
   });
 };
 downBtn.addEventListener("click", async () => arrowChange("down"));
@@ -45,6 +52,47 @@ input.addEventListener("input", async () => {
           return;
         }
 
+        if (response.count) {
+          let count = response.count;
+          let lessTwo = count < 2;
+          if (resultDiv.style.display === "none") {
+            resultDiv.style.display = "";
+          }
+          emphasisObj = response.emphasisObj;
+          if (emphasisObj.actualMatch === emphasisObj.maxMatchs) {
+            resultsExplorer.style.display = "none";
+            btns.style.display = "none";
+          } else {
+            resultsExplorer.style.display = "";
+            btns.style.display = "";
+            resultsExplorer.textContent = `Result ${
+              emphasisObj.actualMatch + 1
+            } of ${emphasisObj.maxMatchs + 1}`;
+          }
+          foundedTerms.textContent = `${count} ${
+            lessTwo ? "result" : "results"
+          } found`;
+          urlRealSearch.textContent = `Search for ${input.value} on internet`;
+          urlRealSearch.href = `https://www.google.com/search?q=${input.value}`;
+          chrome.action.setBadgeText({
+            text: count.toString(),
+          });
+        }
+      }
+    );
+  });
+});
+
+document.addEventListener("DOMContentLoaded", async () => {
+  await chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    chrome.tabs.sendMessage(
+      tabs[0].id,
+      { type: "recoverContext", data: { term: input.value } },
+      (response) => {
+        if (response.stopPlaceholder) {
+          return;
+        }
+        input.value = response.term;
         if (response.count) {
           let count = response.count;
           let lessTwo = count < 2;

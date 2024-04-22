@@ -1,6 +1,4 @@
 
 chrome.runtime.onInstalled.addListener(() => {
-  chrome.action.setBadgeText({
-    text: "On",
-  });
+    chrome.tabs.create({url: "https://luiisp.github.io/wts-web/thanks.html"});
 });

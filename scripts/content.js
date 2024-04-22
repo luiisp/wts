@@ -1,3 +1,4 @@
+let lastMatch = null;
 const emphasis = (e) => {
   e.scrollIntoView({ block: "center" });
   e.style.border = "1.2px solid #100E15 ";
@@ -52,6 +53,7 @@ const searchInPage = (term) => {
       matches.push(highlightSpan);
     }
   }
+  if (matches.length === 0) return { count: false };
   emphasis(matches[0]);
 
   return {
@@ -74,23 +76,33 @@ const removeAllHighlights = () => {
 };
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  console.log(request);
   switch (request.type) {
     case "analyzeDom":
       removeAllHighlights();
-      if (request.data.term == "")
+      if (request.data.term == "") {
+        lastMatch = null;
         return sendResponse({ count: false, stopPlaceholder: true });
-
+      }
       let result = searchInPage(request.data.term);
-      sendResponse({
-        count: result.count,
-        stopPlaceholder: false,
-        emphasisObj: result.emphasisObj,
-      });
+      if (result.count != false) {
+        lastMatch = {
+          term: request.data.term,
+          count: result.count,
+          stopPlaceholder: false,
+          emphasisObj: result.emphasisObj,
+        };
+        sendResponse(lastMatch);
+      } else {
+        sendResponse({
+          stopPlaceholder: true,
+        });
+      }
+
       break;
     case "arrowChange":
       console.log(matches);
       console.log(request.data.newEmphasis);
+      lastMatch.emphasisObj.actualMatch = request.data.newEmphasis;
       for (let i of [
         request.data.newEmphasis - 1,
         request.data.newEmphasis + 1,
@@ -104,8 +116,19 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       emphasis(matches[request.data.newEmphasis]);
 
       break;
+    case "recoverContext":
+      if (lastMatch) {
+        sendResponse(lastMatch);
+      } else {
+        sendResponse({
+          stopPlaceholder: true,
+        });
+      }
+
+      break;
+
     default:
       break;
   }
-    return true;
+  return true;
 });

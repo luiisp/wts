@@ -3,7 +3,7 @@
     "name": "Web Terms Seeker",
     "version": "1.0",
     "description": "Search for keywords or terms on a website.",
-    "permissions": ["activeTab","scripting","tabs"],
+    "permissions": ["activeTab","scripting"],
     "background": {
       "service_worker": "scripts/background.js"
     },
